@@ -46,6 +46,11 @@ namespace RenameForm
             this.afterBtn = new System.Windows.Forms.Button();
             this.beforeDesc = new System.Windows.Forms.Label();
             this.afterDesc = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -188,7 +193,7 @@ namespace RenameForm
             this.afterBtn.Name = "afterBtn";
             this.afterBtn.Size = new System.Drawing.Size(95, 43);
             this.afterBtn.TabIndex = 14;
-            this.afterBtn.Text = "归档";
+            this.afterBtn.Text = "还原";
             this.afterBtn.UseVisualStyleBackColor = true;
             this.afterBtn.Click += new System.EventHandler(this.afterBtn_Click);
             // 
@@ -214,11 +219,70 @@ namespace RenameForm
             this.afterDesc.TabIndex = 16;
             this.afterDesc.Text = "导出999999张图片,当前100%";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(12, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(145, 25);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "操作注意事项：";
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label6.Location = new System.Drawing.Point(12, 44);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(740, 50);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "1.重命名操作选择导出文件夹路径，会默认选择在该路径的同级路径创建一个“art_rename”文件夹。也可以自己选择导出的文件夹路径";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label7.Location = new System.Drawing.Point(12, 94);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(740, 50);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "2.还原操作选择导出文件夹路径，会默认选择在该路径的同级路径下创建一个“art_revert”文件夹。也可以自己选择导出的文件夹路径";
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.Location = new System.Drawing.Point(12, 144);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(740, 67);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "3.程序运行执行\"还原\"操作的时候必须保证已经执行过\"重命名\"操作，没有关闭过工具！！！这是由于\"重命名\"之后的原图信息是保存在代码里面，所以在执行\"还原\"操作的" +
+    "时候原图的名字信息都是保存在代码里面，要是关闭程序这些信息都会清空，\"还原\"操作就会失败";
+            // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(12, 222);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(740, 50);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "4.“D:\\game\\gameTool\\rename\\on\\run\\all\\00001.tga”类似这样的文件路径，导出文件夹选择的路径必须是“D:\\game\\g" +
+    "ameTool\\rename\\on”。也就是图片路径的上两层！！！";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.afterDesc);
             this.Controls.Add(this.beforeDesc);
             this.Controls.Add(this.afterBtn);
@@ -264,6 +328,11 @@ namespace RenameForm
         private System.Windows.Forms.Button afterBtn;
         private System.Windows.Forms.Label beforeDesc;
         private System.Windows.Forms.Label afterDesc;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
     }
 }
 
