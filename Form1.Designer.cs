@@ -51,6 +51,7 @@ namespace RenameForm
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -266,18 +267,30 @@ namespace RenameForm
             // 
             this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(12, 222);
+            this.label9.Location = new System.Drawing.Point(12, 211);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(740, 50);
             this.label9.TabIndex = 21;
             this.label9.Text = "4.“D:\\game\\gameTool\\rename\\on\\run\\all\\00001.tga”类似这样的文件路径，导出文件夹选择的路径必须是“D:\\game\\g" +
     "ameTool\\rename\\on”。也就是图片路径的上两层！！！";
             // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.Location = new System.Drawing.Point(12, 261);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(740, 50);
+            this.label10.TabIndex = 22;
+            this.label10.Text = "5.用美术工具输出之后的命名，一定要跟工具重命名输出的图片名字只是少了前缀！！！不能把比如“all10000.tag”改成“10000.tga”以外的名字！！不然" +
+    "还原的图片会错乱";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -333,6 +346,7 @@ namespace RenameForm
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }
 

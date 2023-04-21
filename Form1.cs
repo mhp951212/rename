@@ -137,7 +137,7 @@ namespace RenameForm
                     }
                     else
                     {
-                        newCount = 10001;
+                        newCount = 10000;
                         nameCount.Add(aa, newCount);
                     }
                     string newName = aa + newCount;
@@ -179,7 +179,6 @@ namespace RenameForm
         }
         private void afterBtn_Click(object sender, EventArgs e)
         {
-            //Debug.WriteLine("撒的吗，" + saveInfo);
             if (afterImportLab.Text == "")
             {
                 MessageBox.Show("请选择要导入的文件夹路径");
@@ -217,6 +216,13 @@ namespace RenameForm
                 {
                     // 获取文件名和扩展名
                     string fileName = Path.GetFileNameWithoutExtension(file);
+                    string directoryPath = Path.GetDirectoryName(file);
+                    //这里的操作加文件所在路径上一层的前缀是因为美术那边工具输出之后是把前缀给删了
+                    //比如保存的是“all\all10000”美术输出变成了“all\10000”
+                    string[] pathLevels_ = directoryPath.Split('\\');
+                    int len_ = pathLevels_.Length;
+                    fileName = pathLevels_[len_ - 1] + fileName;
+
                     if (saveInfo.ContainsKey(fileName))
                     {
                         string reverVaule = saveInfo[fileName];
